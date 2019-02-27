@@ -156,7 +156,7 @@ public class IADExporter {
 					if (production.getTimeSpan()!=null) 
 						writer.write(production.getTimeSpan().getURI()+","+representation.getValue(ontModel)+","+production.getTimeSpan().getValue(ontModel)+"\n");
 					if (production.getManMade().getPlace()!=null)
-						writer.write(production.getTimeSpan()+","+representation.getValue(ontModel)+","+production.getManMade().getPlace().getValue(ontModel)+"\n");
+						writer.write(production.getManMade().getPlace().getURI()+","+representation.getValue(ontModel)+","+production.getManMade().getPlace().getValue(ontModel)+"\n");
 					if (production.getMaterials()!=null) {
 						Iterator<Material> iterMat = production.getMaterials().iterator();
 						String mats = "";
@@ -169,7 +169,7 @@ public class IADExporter {
 						}
 						writer.write(production.getURI()+","+representation.getValue(ontModel)+","+mats+"\n");
 					}
-					writer.write(production.getURI()+","+representation.getValue(ontModel)+","+"Tejido"+"\n");
+					//writer.write(production.getURI()+","+representation.getValue(ontModel)+","+"Tejido"+"\n");
 					
 				}
 				
